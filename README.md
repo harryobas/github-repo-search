@@ -17,7 +17,7 @@ A Dockerfile is included to enable ease of execution on either Linux, mac or win
 
 2. $ cd github-repo-search
 
-3. $ sudo docker build . -t "github-repo-search"
+3. $ sudo docker build -t "github-repo-app" .
 
 4. $ sudo docker run -p 4567:4567 --network="host" github-repo-app
 

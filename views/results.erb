@@ -1,0 +1,18 @@
+ <div class="container mt-5">
+    <h1>Search Results</h1>
+
+    <% if @repos && @repos.any? %>
+      <ul class="list-group mt-3">
+        <% @repos.each do |repo| %>
+          <li class="list-group-item">
+            <a href="<%= repo['html_url'] %>" target="_blank"><%= repo['name'] %></a>
+            <p class="mt-2"><%= repo['description'] %></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="alert alert-info mt-3">No repositories found.</div>
+    <% end %>
+  </div>
+     
+   <div class="container"><a href="/">new search</a></div>

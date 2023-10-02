@@ -21,7 +21,7 @@ A Dockerfile is included to enable ease of execution on either Linux, mac or win
 
 4. $ sudo docker run -p 4567:4567 --network="host" github-repo-app
 
-5. Go to http://localhost:4567 on you browser 
+5. Go to http://localhost:4567 on your browser 
 
 
 

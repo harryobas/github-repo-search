@@ -19,7 +19,9 @@ post '/search' do
 
     response = HTTParty.get(
         github_api_url,
-        
+        headers: {
+            'Authorization': "token #{github_token}"
+        }
     )
 
     @repos = response.parsed_response['items']

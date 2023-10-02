@@ -2,8 +2,11 @@ require 'sinatra'
 require 'httparty'
 require 'json'
 require 'dotenv/load'
+require 'puma'
 
-require sinatra/reloader if development?
+configure do
+    set :server, :puma
+end
 
 get '/' do
     erb :new_search
